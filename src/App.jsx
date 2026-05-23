@@ -63,13 +63,17 @@ function App() {
 
           <main className="relative z-10">
 
-            <Hero />
+           <Hero />
 
-            <Projects />
-            <About />
-            <Skills />
-            <Contact />
-            <Timeline />
+<About />
+
+<Projects />
+
+<Skills />
+
+<Timeline />
+
+<Contact />
           </main>
 
         </div>

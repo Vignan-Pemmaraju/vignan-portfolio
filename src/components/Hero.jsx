@@ -23,7 +23,9 @@ export default function Hero() {
       </ParallaxLayer>
 
       <ParallaxLayer speed={40}>
+
         <div className="hero-content">
+
 
         <motion.p
           initial={{ opacity: 0, y: 40 }}
