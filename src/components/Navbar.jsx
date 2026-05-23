@@ -47,7 +47,7 @@ export default function Navbar(){
     >
 
       <div className="nav-logo">
-        VIGNAN
+        Vignan Pemmaraju
       </div>
 
       {/* DESKTOP NAV */}
