@@ -38,7 +38,13 @@ export default function Navbar(){
 
   return(
 
-    <nav className="navbar">
+    <nav
+      className="navbar"
+      style={{
+        position:"relative",
+        zIndex:9999,
+      }}
+    >
 
       <div className="nav-logo">
         VIGNAN
@@ -107,19 +113,33 @@ export default function Navbar(){
             }}
 
             className="mobile-nav"
+
+            style={{
+              zIndex:99999,
+            }}
           >
 
-            {navLinks.map((link,index)=>(
-
+            {navLinks.map((link,index)=>( 
               <a
 
                 key={index}
 
                 href={link.href}
 
-                onClick={() =>
+                onClick={() => {
                   setMenuOpen(false)
-                }
+
+                  setTimeout(() => {
+                    const target =
+                      document.querySelector(link.href)
+
+                    if(target){
+                      target.scrollIntoView({
+                        behavior:"smooth",
+                      })
+                    }
+                  },100)
+                }}
               >
                 {link.name}
               </a>
