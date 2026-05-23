@@ -146,6 +146,10 @@ body::before{
 }
 
 .social-icon{
+  text-decoration:none;
+
+  color:inherit;
+
   transition:0.3s ease;
 }
 
@@ -439,7 +443,8 @@ body{
 
   box-shadow:
     0 0 40px rgba(0,0,0,0.25);
-    overflow:hidden;
+
+  overflow:hidden;
 }
 /* NAVBAR GLOW */
 
@@ -566,23 +571,6 @@ body{
   left:100%;
 }
 
-/* MOBILE */
-
-@media(max-width:768px){
-
-  .navbar{
-    padding:16px 20px;
-  }
-
-  .nav-links{
-    gap:18px;
-  }
-
-  .nav-links a{
-    font-size:14px;
-  }
-
-}
 /* LOADER SCREEN */
 
 .loader-screen{
@@ -1818,30 +1806,57 @@ padding:32px 28px;
 
 /* MOBILE */
 
-@media(max-width:768px){
-
-  .project-card{
-    min-width:300px;
-  }
-
-  .project-card h3{
-    font-size:22px;
-  }
-
-}
 
 @media(max-width:768px){
 
   .project-modal{
-    padding:28px;
+    width:100%;
+
+    min-height:100vh;
+    overflow-y:auto;
+    max-height:100vh;
+
+    border-radius:0;
+
+    padding:28px 20px;
   }
 
   .modal-title{
     font-size:32px;
   }
 
+  .modal-description{
+    font-size:15px;
+
+    line-height:1.8;
+
+    padding:20px;
+  }
+
+  .modal-section{
+    padding:20px;
+  }
+
+  .modal-section h3{
+    font-size:20px;
+  }
+
+  .modal-section p{
+    font-size:15px;
+  }
+
   .modal-buttons{
     flex-direction:column;
+  }
+
+  .modal-button{
+    width:100%;
+
+    min-height:56px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
 
 }
@@ -2123,13 +2138,260 @@ padding:32px 28px;
 @media(max-width:768px){
 
   .tech-icon{
-    opacity:0.08;
+    opacity:0.07;
   }
 
   .icon-3,
-  .icon-9,
-  .icon-12{
+.icon-5,
+.icon-8,
+.icon-9,
+.icon-11,
+.icon-12,
+.icon-15,
+.icon-17{
+  display:none;
+}
+
+}
+/* MOBILE NAVBAR */
+
+.mobile-menu-btn{
+  display:none;
+  -webkit-tap-highlight-color:transparent;
+  width:50px;
+  height:50px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  color:white;
+
+  font-size:24px;
+
+  cursor:pointer;
+}
+
+.mobile-nav{
+  position:absolute;
+
+  top:90px;
+  left:0;
+  right:0;
+
+  margin:auto;
+
+  width:92%;
+
+  padding:24px;
+
+  border-radius:24px;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:20px;
+
+  background:
+    rgba(15,23,42,0.92);
+
+  backdrop-filter:blur(20px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.4);
+}
+
+.mobile-nav a{
+  color:white;
+
+  text-decoration:none;
+
+  font-size:18px;
+
+  padding:12px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .desktop-nav{
     display:none;
+  }
+
+  .mobile-menu-btn{
+    display:flex;
+    -webkit-tap-highlight-color:transparent;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .navbar{
+    width:94%;
+
+    padding:18px 18px;
+
+    top:16px;
+  }
+
+  .nav-logo{
+    font-size:20px;
+  }
+
+}
+/* HERO MOBILE OPTIMIZATION */
+
+@media(max-width:768px){
+
+  .hero-section{
+    padding:
+      120px 20px 80px;
+
+    min-height:100vh;
+  }
+
+  .hero-content{
+    width:100%;
+
+    text-align:center;
+
+    align-items:center;
+  }
+  .hero-buttons a,
+.hero-buttons button,
+.secondary-button{
+  min-height:56px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+  .hero-subtitle{
+    font-size:14px;
+
+    letter-spacing:0.12em;
+  }
+
+  .hero-title{
+    font-size:
+      clamp(2.8rem,14vw,4.2rem);
+
+    line-height:1.05;
+  }
+
+  .hero-description{
+    width:100%;
+
+    max-width:100%;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    padding:0 6px;
+  }
+
+  .hero-buttons{
+    width:100%;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-top:36px;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button{
+    width:100%;
+  }
+
+  .hero-socials{
+    justify-content:center;
+
+    margin-top:34px;
+  }
+
+}
+/* MOBILE PROJECTS */
+
+@media(max-width:768px){
+
+  .projects-section{
+    padding:80px 18px;
+  }
+  .timeline-section{
+  padding:100px 18px;
+}
+
+.contact-section{
+  padding:120px 18px;
+}
+
+.contact-title{
+  font-size:42px;
+}
+  .section-title{
+    font-size:38px;
+
+    text-align:center;
+
+    margin-bottom:50px;
+  }
+
+  .marquee{
+    margin-bottom:26px;
+  }
+
+  .marquee-track{
+    gap:18px;
+  }
+
+  .project-card{
+    min-width:280px;
+    max-width:280px;
+
+    min-height:340px;
+
+    padding:26px 22px;
+
+    border-radius:24px;
+  }
+
+  .project-card h3{
+    font-size:22px;
+
+    line-height:1.3;
+  }
+
+  .project-tags{
+    font-size:12px;
+
+    margin-bottom:16px;
+  }
+
+  .project-card p{
+    font-size:14px;
+
+    line-height:1.7;
+  }
+
+}
+@media(max-width:768px){
+
+  .future-card,
+  .project-card,
+  .skill-card,
+  .contact-card,
+  .timeline-content{
+    backdrop-filter:blur(12px);
   }
 
 }
