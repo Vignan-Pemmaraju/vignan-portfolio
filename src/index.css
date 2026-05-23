@@ -417,24 +417,24 @@ body{
 .navbar{
   position:fixed;
 
-  top:24px;
+  top:18px;
   margin:auto;
   right:0;
   left:0;
   width:min(1100px,90%);
 
-  padding:18px 32px;
+  padding:12px 24px;
 
   display:flex;
   justify-content:space-between;
   align-items:center;
 
-  border-radius:24px;
+  border-radius:18px;
 
   background:
-    rgba(255,255,255,0.05);
+  rgba(5,10,20,0.28);
 
-  backdrop-filter:blur(20px);
+  backdrop-filter:blur(12px);
 
   border:
     1px solid rgba(255,255,255,0.08);
@@ -442,9 +442,34 @@ body{
   z-index:1000;
 
   box-shadow:
-    0 0 40px rgba(0,0,0,0.25);
+  0 8px 24px rgba(0,0,0,0.16);
 
   overflow:hidden;
+}
+.navbar::after{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+  right:0;
+
+  height:50%;
+
+  border-radius:inherit;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0.03),
+      transparent
+    );
+
+  pointer-events:none;
+
+  z-index:1;
 }
 /* NAVBAR GLOW */
 
@@ -481,7 +506,7 @@ body{
 /* LOGO */
 
 .nav-logo{
-  font-size:24px;
+  font-size:17px;
   font-weight:800;
 
   background:
@@ -506,7 +531,7 @@ body{
 .nav-links a{
   position:relative;
 
-  padding:12px 22px;
+  padding:10px 16px;
 
   border-radius:999px;
 
@@ -2179,13 +2204,13 @@ padding:32px 28px;
 
   position:absolute;
 
-  top:90px;
+  top:74px;
   left:0;
   right:0;
 
   margin:auto;
 
-  width:92%;
+  width:90%;
 
   padding:24px;
 
@@ -2253,15 +2278,15 @@ padding:32px 28px;
 
   .navbar{
 
-    width:94%;
+  width:90%;
 
-    padding:18px 18px;
+  padding:10px 16px;
 
-    top:16px;
-  }
+  top:14px;
+}
 
   .nav-logo{
-    font-size:20px;
+    font-size:17px;
   }
 
 }
@@ -2284,8 +2309,6 @@ padding:32px 28px;
 
     align-items:center;
   }
-  .hero-buttons a,
-.hero-buttons button,
 .secondary-button{
   min-height:56px;
 
