@@ -2176,6 +2176,7 @@ padding:32px 28px;
 }
 
 .mobile-nav{
+
   position:absolute;
 
   top:90px;
@@ -2196,7 +2197,7 @@ padding:32px 28px;
   gap:20px;
 
   background:
-    rgba(15,23,42,0.92);
+    rgba(15,23,42,0.96);
 
   backdrop-filter:blur(20px);
 
@@ -2204,17 +2205,31 @@ padding:32px 28px;
     1px solid rgba(255,255,255,0.08);
 
   box-shadow:
-    0 10px 40px rgba(0,0,0,0.4);
+    0 10px 40px rgba(0,0,0,0.45);
+
+  z-index:999999;
 }
 
 .mobile-nav a{
+
   color:white;
 
   text-decoration:none;
 
   font-size:18px;
 
+  font-weight:500;
+
   padding:12px 0;
+
+  transition:0.3s ease;
+}
+
+.mobile-nav a:hover{
+
+  color:#00d9ff;
+
+  transform:translateX(6px);
 }
 
 /* MOBILE */
@@ -2226,13 +2241,18 @@ padding:32px 28px;
   }
 
   .mobile-menu-btn{
+
     display:flex;
-    -webkit-tap-highlight-color:transparent;
+
     align-items:center;
     justify-content:center;
+
+    -webkit-tap-highlight-color:
+      transparent;
   }
 
   .navbar{
+
     width:94%;
 
     padding:18px 18px;
@@ -2245,6 +2265,7 @@ padding:32px 28px;
   }
 
 }
+
 /* HERO MOBILE OPTIMIZATION */
 
 @media(max-width:768px){
